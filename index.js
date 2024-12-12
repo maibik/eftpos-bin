@@ -5,5 +5,3 @@ function IsEftpos(bin) {
   }
   
 module.exports = {IsEftpos};
-
-console.log('IsEftpos: ' , IsEftpos(123123));
