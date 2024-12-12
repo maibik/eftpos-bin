@@ -4,4 +4,6 @@ function IsEftpos(bin) {
     return bin in binList;
   }
   
-  module.exports = IsEftpos;
+module.exports = {IsEftpos};
+
+console.log('IsEftpos: ' , IsEftpos(123123));
