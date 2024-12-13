@@ -1,6 +1,6 @@
 {
   "name": "eftpos-bin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Package to check if BIN number of a card belongs to EFTPOS AU processing network",
   "main": "index.js",
   "scripts": {
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/maibik/eftpos-bin/issues"
   },
-  "homepage": "https://github.com/maibik/eftpos-bin#readme"
+  "homepage": "https://github.com/maibik/eftpos-bin#readme",
+  "dependencies": {
+    "eftpos-bin": "^0.0.2"
+  }
 }
