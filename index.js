@@ -1,14 +1,13 @@
 const binList = require("./binList.js");
 
 function isEftpos(bin) {
-    return bin in binList;
-}
-  
-function getCardTypeByBin(bin) {
-  if (isEftpos(bin))
-    return binList[bin].type;
-  else
-   return "not_eftpos_card";
+  bin = Number(bin.toString().substring(0, 8));  // Ensure bin is 8 digits
+  console.log('binbin', bin);
+  return bin in binList || Number(bin.toString().substring(0, 6)) in binList;
 }
 
-module.exports = {isEftpos, getCardTypeByBin};
+function getCardTypeByBin(bin) {
+  return isEftpos(bin) ? binList[bin].type : "not_eftpos_card";
+}
+
+module.exports = { isEftpos, getCardTypeByBin };
