@@ -20,7 +20,5 @@
     "url": "https://github.com/maibik/eftpos-bin/issues"
   },
   "homepage": "https://github.com/maibik/eftpos-bin#readme",
-  "dependencies": {
-    "eftpos-bin": "^0.0.2"
-  }
+  "dependencies": {}
 }
