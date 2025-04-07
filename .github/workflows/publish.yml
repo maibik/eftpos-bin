@@ -22,6 +22,11 @@ jobs:
       - name: Run tests
         run: npm test
       
+      - name: Login to npm
+        run: npm login --registry=https://registry.npmjs.org --scope=@maibik
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      
       - name: Publish to NPM
         run: npm publish --access public
         env:
