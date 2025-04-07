@@ -7,7 +7,16 @@ function isEftpos(bin) {
 }
 
 function getCardTypeByBin(bin) {
-  return isEftpos(bin) ? binList[bin].type : "not_eftpos_card";
+  const eightDigitBin = Number(bin.toString().substring(0, 8));
+  const sixDigitBin = Number(bin.toString().substring(0, 6));
+  
+  if (eightDigitBin in binList) {
+    return binList[eightDigitBin].type;
+  }
+  if (sixDigitBin in binList) {
+    return binList[sixDigitBin].type;
+  }
+  return "not_eftpos_card";
 }
 
 module.exports = { isEftpos, getCardTypeByBin };
