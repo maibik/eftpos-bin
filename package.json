@@ -1,6 +1,6 @@
 {
   "name": "@mrfintech/eftpos-bin",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Package to check if BIN number of a card belongs to EFTPOS AU processing network",
   "main": "index.js",
   "scripts": {

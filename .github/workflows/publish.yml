@@ -1,4 +1,4 @@
-name: Publish to NPM
+name: Publish Package
 
 on:
   release:
@@ -7,14 +7,14 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    environment: NODE_AUTH_TOKEN
+    environment: Live
     steps:
       - uses: actions/checkout@v3
       
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '22.x'
+          node-version: '18.x'
           registry-url: 'https://registry.npmjs.org'
       
       - name: Install dependencies
@@ -24,11 +24,7 @@ jobs:
         run: npm test
       
       - name: Login to npm
-        run: npm login --scope=@mrfintech --auth-type=legacy --registry=https://registry.npmjs.org  
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
       
       - name: Publish to NPM
-        run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} 
+        run: npm publish --access public 
