@@ -23,9 +23,17 @@ jobs:
         run: npm test
       
       - name: Login to npm
-        run: npm login --registry=https://registry.npmjs.org --scope=@mrfintech --auth-type=legacy
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > .npmrc
+          echo "//registry.npmjs.org/:username=${NPM_USERNAME}" >> .npmrc
+          echo "//registry.npmjs.org/:password=${NPM_PASSWORD}" >> .npmrc
+          echo "//registry.npmjs.org/:email=${NPM_EMAIL}" >> .npmrc
+          npm login --registry=https://registry.npmjs.org --auth-type=legacy --scope=@mrfintech
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_USERNAME: ${{ secrets.NPM_USERNAME }}
+          NPM_PASSWORD: ${{ secrets.NPM_PASSWORD }}
+          NPM_EMAIL: ${{ secrets.NPM_EMAIL }}
       
       - name: Publish to NPM
         run: npm publish --access public
