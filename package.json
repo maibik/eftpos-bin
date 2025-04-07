@@ -1,5 +1,5 @@
 {
-  "name": "eftpos-bin",
+  "name": "@mrfintech/eftpos-bin",
   "version": "0.0.6",
   "description": "Package to check if BIN number of a card belongs to EFTPOS AU processing network",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maibik/eftpos-bin.git"
+    "url": "git+https://github.com/mrfintech/eftpos-bin.git"
   },
   "keywords": [
     "eftpos",
@@ -18,12 +18,12 @@
     "payment",
     "card"
   ],
-  "author": "IhorM",
+  "author": "MrFintech",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/maibik/eftpos-bin/issues"
+    "url": "https://github.com/mrfintech/eftpos-bin/issues"
   },
-  "homepage": "https://github.com/maibik/eftpos-bin#readme",
+  "homepage": "https://github.com/mrfintech/eftpos-bin#readme",
   "dependencies": {},
   "devDependencies": {
     "jest": "^29.7.0"
