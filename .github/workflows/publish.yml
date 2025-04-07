@@ -23,7 +23,7 @@ jobs:
         run: npm test
       
       - name: Login to npm
-        run: npm login --registry=https://registry.npmjs.org --scope=@mrfintech
+        run: npm login --registry=https://registry.npmjs.org --scope=@mrfintech --auth-type=legacy
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       
