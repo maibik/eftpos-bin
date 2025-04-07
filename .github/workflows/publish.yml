@@ -7,7 +7,7 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    environment: Live
+    environment: NODE_AUTH_TOKEN
     steps:
       - uses: actions/checkout@v3
       
@@ -24,7 +24,7 @@ jobs:
         run: npm test
       
       - name: Login to npm
-        run: npm login --registry=https://registry.npmjs.org --auth-type=legacy --scope=@mrfintech
+        run: npm login --scope=@mrfintech --auth-type=legacy --registry=https://registry.npmjs.org  
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       
