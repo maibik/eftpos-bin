@@ -1,6 +1,6 @@
 # Australian domestic card scheme checker
 
-BIN list last updated:  25 November 2024.
+Latest EFTPOS BIN table updates:  25 November 2024.
 
 ### Install
 npm install eftpos-bin
