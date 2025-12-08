@@ -317,12 +317,6 @@ const binList = {
     "579974": {
       "type": "debit"
     },
-    "545818": {
-      "type": "debit"
-    },
-    "559741": {
-      "type": "debit"
-    },
     "402979": {
       "type": "debit"
     },
